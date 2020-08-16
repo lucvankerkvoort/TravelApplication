@@ -24,7 +24,7 @@
   form {
     position: relative;
     // border: 2px solid black;
-    height: 250px;
+    height: 300px;
     display: flex;
     border: 5px solid rgb(240, 184, 40);
     width: 50%;
@@ -53,9 +53,5 @@
       padding: 10px 0px;
       font-size: 0.7em;
     }
-  }
-  button {
-    font-family: $text-font;
-    padding: 3px;
   }
 }
