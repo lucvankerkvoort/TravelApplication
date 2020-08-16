@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+$header-font: "Lobster", sans-serif;
+$text-font: "Montserrat", sans-serif;
+
+.incapsulated {
+  display: flex;
+  margin: auto;
+  width: 70%;
+}

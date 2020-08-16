@@ -1,0 +1,19 @@
+@import "globals/Variables";
+
+.footer {
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f9f8f9,
+    #f3f1f2,
+    #edebeb,
+    #e7e4e4
+  );
+  height: 25px;
+  padding: 50px 0px;
+  .footer-items {
+    border-top: 2px solid black;
+    text-align: center;
+    font-family: $text-font;
+  }
+}
