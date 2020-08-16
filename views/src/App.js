@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/home";
 import Footer from "./Components/Footer";
@@ -7,14 +7,16 @@ import Login from "./Pages/login";
 import Register from "./Pages/register";
 import "./Styles/import.scss";
 import { images } from "./Images";
-import { HashRouter, Route, useHistory } from "react-router-dom";
-
+import { HashRouter, Route /*useHistory*/ } from "react-router-dom";
+import { store } from "./Services/store";
 const App = () => {
-  const history = useHistory();
+  const userData = useContext(store);
+  console.log(userData);
+  // const history = useHistory();
   return (
     <div className="App">
       <HashRouter>
-        <Navbar props={history} />
+        <Navbar /*props={history} */ />
         <Route
           exact
           path="/"

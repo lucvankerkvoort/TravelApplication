@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-const initialState = {};
+const initialState = { welcome: "hello world" };
 const store = createContext(initialState);
 const { Provider } = store;
 

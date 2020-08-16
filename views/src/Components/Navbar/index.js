@@ -1,24 +1,14 @@
 import React from "react";
-import Login from "../../Pages/login";
-import Register from "../../Pages/register";
 import { images } from "../../Images";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ props }) => {
-  const handleClick = (element) => {
-    switch (element) {
-      case "login":
-        return <Login {...props} />;
-      case "register":
-        return <Register {...props} />;
-      default:
-        return;
-    }
-  };
+const Navbar = () => {
   return (
     <div className="navbar incapsulated">
       <div className="logo">
-        <img src={images.Logo} alt="..." width="100px" />
+        <Link to="/">
+          <img src={images.Logo} alt="..." width="100px" />
+        </Link>
       </div>
       <div className="navbar-items">
         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
