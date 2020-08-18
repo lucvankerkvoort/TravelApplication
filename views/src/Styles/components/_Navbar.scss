@@ -2,14 +2,28 @@
 .navbar {
   //   border: 2px solid black;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   .navbar-items {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     p {
       font-family: $text-font;
       margin: 0px 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    .logo {
+      width: 20%;
+    }
+    .navbar-items {
+      width: 60%;
     }
   }
 }

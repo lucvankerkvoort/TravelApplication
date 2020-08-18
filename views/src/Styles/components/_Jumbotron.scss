@@ -3,22 +3,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 250px;
   background: black;
   //   border: 2px solid black;
   h1 {
     font-family: $header-font;
-    color: white;
+    color: $yellow;
     text-shadow: 1px 1px 3px black;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid $yellow;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .jumbotron {
+    height: 400px;
     h1 {
       font-size: 4em;
-      border-bottom: 5px solid white;
+      border-bottom: 5px solid $yellow;
     }
   }
 }

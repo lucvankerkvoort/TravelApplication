@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar incapsulated">
+    <div className="navbar">
       <div className="logo">
         <Link to="/">
           <img src={images.Logo} alt="..." width="100px" />

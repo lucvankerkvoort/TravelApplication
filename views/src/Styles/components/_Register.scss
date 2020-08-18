@@ -1,3 +1,65 @@
+@import "globals/Variables";
+
 .register {
-  height: 500px;
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: $text-font;
+  border-radius: 5px;
+  //   align-items: center;
+  h1 {
+    position: absolute;
+    top: 75px;
+    width: 100%;
+    font-family: $header-font;
+    color: black;
+    font-size: 4em;
+    background: white;
+    // text-shadow: 2px 2px 6px black;
+    border-bottom: 3px solid black;
+  }
+  .register-form {
+    position: relative;
+    // border: 2px solid black;
+    height: 350px;
+    display: flex;
+    border: 5px solid rgb(240, 184, 40);
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    font-family: $text-font;
+    margin: 50px;
+    padding: 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    input {
+      margin: 15px;
+      padding: 3px;
+      font-family: $text-font;
+    }
+    .register-box-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 50px;
+      background: lightgray;
+      width: 100%;
+      bottom: 0px;
+      padding: 10px 0px;
+      font-size: 0.7em;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .register {
+    display: flex;
+    margin: auto;
+    width: 70%;
+  }
 }

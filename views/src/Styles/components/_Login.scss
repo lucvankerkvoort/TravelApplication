@@ -21,10 +21,10 @@
     // text-shadow: 2px 2px 6px black;
     border-bottom: 3px solid black;
   }
-  form {
+  .login-form {
     position: relative;
     // border: 2px solid black;
-    height: 300px;
+    height: 200px;
     display: flex;
     border: 5px solid rgb(240, 184, 40);
     width: 50%;
@@ -37,8 +37,9 @@
     border-radius: 10px;
     box-shadow: 5px 5px 10px black;
     input {
-      margin: 15px;
+      margin: 10px;
       padding: 3px;
+      color: black;
       font-family: $text-font;
     }
     .login-box-footer {
@@ -53,5 +54,13 @@
       padding: 10px 0px;
       font-size: 0.7em;
     }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .login {
+    display: flex;
+    margin: auto;
+    width: 70%;
   }
 }

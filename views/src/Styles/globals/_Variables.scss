@@ -5,27 +5,35 @@
   margin: 0px;
   padding: 0px;
 }
-
+// Fonts
 $header-font: "Lobster", sans-serif;
 $text-font: "Montserrat", sans-serif;
 
-.incapsulated {
-  display: flex;
-  margin: auto;
-  width: 70%;
-}
+// Colors
+$yellow: rgb(240, 184, 40);
 
+// Styling
+// .incapsulated {
+//   display: flex;
+//   margin: auto;
+//   width: 70%;
+// }
 button {
   font-family: $text-font;
   background: rgb(240, 184, 40);
-  border: 1.5px solid black;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 4px black;
   // border: 2px solid rgba(240, 184, 40, 0.9);
   padding: 5px;
   border-radius: 4px;
+  margin: 2px;
   cursor: pointer;
 }
 
 button:active {
   background: rgb(238, 211, 45);
-  border: 2px solid rgb(240, 184, 40);
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 3px black;
 }
