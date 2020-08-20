@@ -32,6 +32,7 @@ class SignUpFormBase extends Component {
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then((authUser) => {
         this.setState({ ...INITIAL_STATE });
+        localStorage.setItem("authUser", JSON.stringify(authUser.user.l));
         this.props.history.push("/");
       })
       .catch((error) => {
@@ -55,6 +56,7 @@ class SignUpFormBase extends Component {
       username === "";
     return (
       <form className="register-form" onSubmit={this.onSubmit}>
+        <label>Username:</label>
         <input
           name="username"
           value={username}
@@ -62,6 +64,8 @@ class SignUpFormBase extends Component {
           type="text"
           placeholder="Full Name"
         />
+
+        <label>Email:</label>
         <input
           name="email"
           value={email}
@@ -69,6 +73,8 @@ class SignUpFormBase extends Component {
           type="text"
           placeholder="Email Address"
         />
+
+        <label>Password:</label>
         <input
           name="passwordOne"
           value={passwordOne}
@@ -76,6 +82,8 @@ class SignUpFormBase extends Component {
           type="password"
           placeholder="Password"
         />
+
+        <label>Confirm Password:</label>
         <input
           name="passwordTwo"
           value={passwordTwo}

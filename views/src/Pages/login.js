@@ -31,8 +31,9 @@ class SignInFormBase extends Component {
 
     this.props.firebase
       .doSignInWithEmailAndPassword(email, password)
-      .then(() => {
+      .then((user) => {
         this.setState({ ...INITIAL_STATE });
+        localStorage.setItem("authUser", JSON.stringify(user.user.l));
         this.props.history.push("/");
       })
       .catch((error) => {
@@ -53,6 +54,7 @@ class SignInFormBase extends Component {
 
     return (
       <form className="login-form" onSubmit={this.onSubmit}>
+        <label>Email:</label>
         <input
           name="email"
           value={email}
@@ -60,6 +62,7 @@ class SignInFormBase extends Component {
           type="text"
           placeholder="Email Address"
         />
+        <label>Password:</label>
         <input
           name="password"
           value={password}
