@@ -1,0 +1,24 @@
+@import "globals/Variables";
+
+.search-profile {
+  display: flex;
+  border: 7px solid $yellow;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 10px 10px 5px gray;
+  justify-content: space-between;
+  .profile-pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 6px solid $yellow;
+  }
+  .profile-info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: $text-font;
+  }
+}

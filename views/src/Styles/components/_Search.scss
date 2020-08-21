@@ -1,0 +1,35 @@
+.search {
+  display: flex;
+  height: 80vh;
+  .google-maps-placeholder {
+    height: 100%;
+    width: 50%;
+    border: 2px solid black;
+  }
+  .guides {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    // border: 2px solid black;
+    .guides-title {
+      // border: 2px solid black;
+      height: 75px;
+      text-align: center;
+      font-size: 2em;
+      font-family: $header-font;
+    }
+    .available-guides {
+      height: 100%;
+      //   width: 50%;
+      // border: 2px solid black;
+      overflow: scroll;
+
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      /* Hide scrollbar for Chrome, Safari and Opera */
+    }
+    .available-guides::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
