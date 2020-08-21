@@ -1,11 +1,22 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { withFirebase } from "../Firebase";
+import { db } from "../Firebase/firebase";
+import { store } from "../Services/store";
 import { images } from "../Images";
 import { compose } from "recompose";
+import AddPicture from "../Components/AddPicture/addpicture";
+import Preview from "../Components/Preview/preview";
 
 const Register = () => (
-  <div className="register" style={{ background: `url(${images.jumbotron1})` }}>
+  <div
+    className="register"
+    style={{
+      background: `url(${images.jumbotron1})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
     <h1>Register</h1>
     <SignUpForm />
   </div>
@@ -17,6 +28,7 @@ const INITIAL_STATE = {
   passwordOne: "",
   passwordTwo: "",
   error: null,
+  image: false,
 };
 
 class SignUpFormBase extends Component {
@@ -25,78 +37,109 @@ class SignUpFormBase extends Component {
     this.state = { ...INITIAL_STATE };
   }
 
+  static userData = store;
+
   onSubmit = (event) => {
+    event.preventDefault();
     const { username, email, passwordOne } = this.state;
+
+    const info = {
+      images: this.context.state.images,
+      username,
+      email,
+    };
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then((authUser) => {
-        this.setState({ ...INITIAL_STATE });
+        db.collection("users")
+          .doc(username)
+          .set(info)
+          .then((res) => console.log(res));
+
+        // this.setState({ ...INITIAL_STATE });
         localStorage.setItem("authUser", JSON.stringify(authUser.user.l));
         this.props.history.push("/");
       })
       .catch((error) => {
         this.setState({ error });
       });
-
-    event.preventDefault();
   };
 
+  setImages = (input) => {
+    this.setState({ image: input });
+  };
   onChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
   render() {
-    const { username, email, passwordOne, passwordTwo, error } = this.state;
+    const {
+      username,
+      email,
+      passwordOne,
+      passwordTwo,
+      error,
+      image,
+    } = this.state;
 
     const isInvalid =
       passwordOne !== passwordTwo ||
       passwordOne === "" ||
       email === "" ||
-      username === "";
+      username === "" ||
+      image === false;
     return (
-      <form className="register-form" onSubmit={this.onSubmit}>
-        <label>Username:</label>
-        <input
-          name="username"
-          value={username}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Full Name"
-        />
+      <div className="registration-div">
+        <div className="profile-picture">
+          <AddPicture setImage={this.setImages} />
+          <Preview setImage={this.setImages} />
+        </div>
+        <div className="registration-form">
+          <form onSubmit={this.onSubmit}>
+            <label>Username:</label>
+            <input
+              name="username"
+              value={username}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Full Name"
+            />
 
-        <label>Email:</label>
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
+            <label>Email:</label>
+            <input
+              name="email"
+              value={email}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Email Address"
+            />
 
-        <label>Password:</label>
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
+            <label>Password:</label>
+            <input
+              name="passwordOne"
+              value={passwordOne}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Password"
+            />
 
-        <label>Confirm Password:</label>
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
+            <label>Confirm Password:</label>
+            <input
+              name="passwordTwo"
+              value={passwordTwo}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Confirm Password"
+            />
+            <button disabled={isInvalid} type="submit">
+              Sign Up
+            </button>
 
-        {error && <p>{error.message}</p>}
-      </form>
+            {error && <p>{error.message}</p>}
+          </form>
+        </div>
+      </div>
     );
   }
 }
@@ -106,6 +149,8 @@ const SignUpLink = () => (
     Don't have an account? <Link to="/register">Sign Up</Link>
   </p>
 );
+
+SignUpFormBase.contextType = store;
 
 const SignUpForm = compose(withRouter, withFirebase)(SignUpFormBase);
 

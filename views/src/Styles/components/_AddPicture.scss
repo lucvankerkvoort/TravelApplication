@@ -1,0 +1,28 @@
+.add-item {
+  margin: 20px;
+  form {
+    display: flex;
+    flex-direction: column;
+    input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+    label {
+      font-family: $text-font;
+      background: rgb(240, 184, 40);
+      border: none;
+      outline: none;
+      box-shadow: 3px 3px 4px black;
+      // border: 2px solid rgba(240, 184, 40, 0.9);
+      padding: 5px;
+      border-radius: 4px;
+      margin: 2px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/home";
 import Footer from "./Components/Footer";
@@ -11,8 +11,10 @@ import { HashRouter, Route /*useHistory*/ } from "react-router-dom";
 import { store } from "./Services/store";
 const App = () => {
   const userData = useContext(store);
+  const { dispatch } = userData;
   console.log(userData);
   // const history = useHistory();
+  useEffect(() => {});
   return (
     <div className="App">
       <HashRouter>

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { images } from "../../Images";
 import { Link } from "react-router-dom";
+import SignOutButton from "../SignOutButton/signout";
 
 const Navbar = () => {
   return (
@@ -14,12 +15,32 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
           <p>Home</p>
         </Link>
-        <Link to="/login" style={{ textDecoration: "none", color: "black" }}>
-          <p>Login</p>
-        </Link>
-        <Link to="/register" style={{ textDecoration: "none", color: "black" }}>
-          <p>Register</p>
-        </Link>
+        {localStorage.getItem("authUser") === "" ? (
+          <>
+            <Link
+              to="/login"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <p>Login</p>
+            </Link>
+            <Link
+              to="/register"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <p>Register</p>
+            </Link>
+          </>
+        ) : (
+          <>
+            <SignOutButton />
+            <Link style={{ textDecoration: "none", color: "black" }}>
+              <p>Become a Guide</p>
+            </Link>
+            <Link style={{ textDecoration: "none", color: "black" }}>
+              <p>Help</p>
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );

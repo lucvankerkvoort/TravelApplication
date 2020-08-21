@@ -1,0 +1,20 @@
+.preview {
+  .preview-item-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: lightgray;
+    border: 10px solid gray;
+  }
+  .preview-item {
+    div {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      border: 10px solid rgb(240, 184, 40);
+    }
+  }
+}
