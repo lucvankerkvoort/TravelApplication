@@ -1,0 +1,12 @@
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  .google-map {
+    height: 90%;
+    width: 90%;
+    box-shadow: 5px 5px 10px gray;
+  }
+}

@@ -3,6 +3,8 @@ import { images } from "../../Images";
 import { Link } from "react-router-dom";
 import SignOutButton from "../SignOutButton/signout";
 
+import SearchLocationInput from "../GoogleMaps/autocomplete";
+
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -15,6 +17,9 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
           <p>Home</p>
         </Link>
+        <div>
+          <SearchLocationInput />
+        </div>
         {localStorage.getItem("authUser") === "" ? (
           <>
             <Link
