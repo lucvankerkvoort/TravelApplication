@@ -41,9 +41,9 @@ const Navbar = () => {
             <Link style={{ textDecoration: "none", color: "black" }}>
               <p>Become a Guide</p>
             </Link>
-            <Link style={{ textDecoration: "none", color: "black" }}>
+            {/* <Link style={{ textDecoration: "none", color: "black" }}>
               <p>Help</p>
-            </Link>
+            </Link> */}
           </>
         )}
       </div>

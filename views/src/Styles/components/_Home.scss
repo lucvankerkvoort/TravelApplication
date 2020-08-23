@@ -2,11 +2,21 @@
   // border: 2px solid black;
   height: 80vh;
 }
+.home-search {
+  position: absolute;
+  top: 125px;
+  left: 10px;
+}
 
 @media only screen and (min-width: 600px) {
   .home {
     display: flex;
     margin: auto;
     width: 70%;
+  }
+  .home-search {
+    position: absolute;
+    top: 200px;
+    left: 100px;
   }
 }

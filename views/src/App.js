@@ -43,6 +43,9 @@ const App = () => {
           path="/"
           render={(props) => (
             <>
+              <div className="home-search">
+                <SearchLocationInput />
+              </div>
               <Jumbotron pic={images.jumbotron1} text="Welcome to Locals" />
               <Home {...props} />
             </>
