@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/locals/static/css/main.e5502048.chunk.css",
-    "main.js": "/locals/static/js/main.2d6921a6.chunk.js",
-    "main.js.map": "/locals/static/js/main.2d6921a6.chunk.js.map",
-    "runtime-main.js": "/locals/static/js/runtime-main.23ba090b.js",
-    "runtime-main.js.map": "/locals/static/js/runtime-main.23ba090b.js.map",
-    "static/js/2.9170e1ac.chunk.js": "/locals/static/js/2.9170e1ac.chunk.js",
-    "static/js/2.9170e1ac.chunk.js.map": "/locals/static/js/2.9170e1ac.chunk.js.map",
-    "index.html": "/locals/index.html",
-    "precache-manifest.f732f85e11a09edfd5d16da80c240696.js": "/locals/precache-manifest.f732f85e11a09edfd5d16da80c240696.js",
-    "service-worker.js": "/locals/service-worker.js",
-    "static/css/main.e5502048.chunk.css.map": "/locals/static/css/main.e5502048.chunk.css.map",
-    "static/js/2.9170e1ac.chunk.js.LICENSE.txt": "/locals/static/js/2.9170e1ac.chunk.js.LICENSE.txt",
-    "static/media/Locals.png": "/locals/static/media/Locals.546249d4.png",
-    "static/media/jumbotron1.jpg": "/locals/static/media/jumbotron1.bcba3a51.jpg"
+    "main.css": "/TravelApplication/static/css/main.e5502048.chunk.css",
+    "main.js": "/TravelApplication/static/js/main.1425d0e8.chunk.js",
+    "main.js.map": "/TravelApplication/static/js/main.1425d0e8.chunk.js.map",
+    "runtime-main.js": "/TravelApplication/static/js/runtime-main.5777e109.js",
+    "runtime-main.js.map": "/TravelApplication/static/js/runtime-main.5777e109.js.map",
+    "static/js/2.1471613e.chunk.js": "/TravelApplication/static/js/2.1471613e.chunk.js",
+    "static/js/2.1471613e.chunk.js.map": "/TravelApplication/static/js/2.1471613e.chunk.js.map",
+    "index.html": "/TravelApplication/index.html",
+    "precache-manifest.97d7b9a30c90151683a1e22345ed8236.js": "/TravelApplication/precache-manifest.97d7b9a30c90151683a1e22345ed8236.js",
+    "service-worker.js": "/TravelApplication/service-worker.js",
+    "static/css/main.e5502048.chunk.css.map": "/TravelApplication/static/css/main.e5502048.chunk.css.map",
+    "static/js/2.1471613e.chunk.js.LICENSE.txt": "/TravelApplication/static/js/2.1471613e.chunk.js.LICENSE.txt",
+    "static/media/Locals.png": "/TravelApplication/static/media/Locals.546249d4.png",
+    "static/media/jumbotron1.jpg": "/TravelApplication/static/media/jumbotron1.bcba3a51.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.23ba090b.js",
-    "static/js/2.9170e1ac.chunk.js",
+    "static/js/runtime-main.5777e109.js",
+    "static/js/2.1471613e.chunk.js",
     "static/css/main.e5502048.chunk.css",
-    "static/js/main.2d6921a6.chunk.js"
+    "static/js/main.1425d0e8.chunk.js"
   ]
 }
