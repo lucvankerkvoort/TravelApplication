@@ -12,6 +12,9 @@
       margin: 0px 15px;
     }
   }
+  .navbar-search {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -24,6 +27,11 @@
     }
     .navbar-items {
       width: 60%;
+    }
+    .navbar-search {
+      display: flex;
+      position: absolute;
+      right: 50px;
     }
   }
 }

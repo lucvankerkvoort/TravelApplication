@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
           <p>Home</p>
         </Link>
-        <div>
+        <div className="navbar-search">
           <SearchLocationInput />
         </div>
         {localStorage.getItem("authUser") === "" ? (

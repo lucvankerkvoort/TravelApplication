@@ -32,11 +32,11 @@ const App = () => {
     <div className="App">
       {/* <SearchLocationInput />
       <Map location={location} zoomLevel={17} /> */}
-      <HashRouter>
+      {/* <HashRouter>
         <Navbar />
         <Search />
-      </HashRouter>
-      {/* <HashRouter>
+      </HashRouter> */}
+      <HashRouter>
         <Navbar />
         <Route
           exact
@@ -52,7 +52,7 @@ const App = () => {
         <Route path="/login" render={(props) => <Login {...props} />} />
         <Route path="/register" render={(props) => <Register {...props} />} />
         <Footer />
-      </HashRouter> */}
+      </HashRouter>
     </div>
   );
 };

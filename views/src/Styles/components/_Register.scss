@@ -3,7 +3,7 @@
 .register {
   display: flex;
   flex-direction: column;
-  height: 750px;
+  height: 180vh;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -28,16 +28,22 @@
     display: flex;
     border: 5px solid rgb(240, 184, 40);
     // width: 500px;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: $text-font;
     margin: 50px;
-    padding: 50px;
+    // padding: 50px;
     background: white;
     border-radius: 10px;
     box-shadow: 5px 5px 10px black;
 
+    .profile-picture {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .registration-form {
       form {
         display: flex;
@@ -61,5 +67,9 @@
     display: flex;
     margin: auto;
     width: 70%;
+    height: 1000px;
+    .registration-div {
+      padding: 40px;
+    }
   }
 }

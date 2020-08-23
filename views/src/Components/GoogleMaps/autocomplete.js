@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { images } from "../../Images";
+import { Link } from "react-router-dom";
 
 let autoComplete;
 
@@ -58,6 +60,11 @@ function SearchLocationInput() {
         placeholder="Enter a City"
         value={query}
       />
+      <Link to="/search">
+        <button>
+          <img src={images.Search} alt="..." />
+        </button>
+      </Link>
     </div>
   );
 }
