@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TravelApplication/static/css/main.7630ce12.chunk.css",
+    "main.css": "/TravelApplication/static/css/main.76fae1c8.chunk.css",
     "main.js": "/TravelApplication/static/js/main.227da171.chunk.js",
     "main.js.map": "/TravelApplication/static/js/main.227da171.chunk.js.map",
     "runtime-main.js": "/TravelApplication/static/js/runtime-main.5777e109.js",
@@ -8,9 +8,9 @@
     "static/js/2.d01c9749.chunk.js": "/TravelApplication/static/js/2.d01c9749.chunk.js",
     "static/js/2.d01c9749.chunk.js.map": "/TravelApplication/static/js/2.d01c9749.chunk.js.map",
     "index.html": "/TravelApplication/index.html",
-    "precache-manifest.60971fc0616c5f0c75cd26e7128eab0a.js": "/TravelApplication/precache-manifest.60971fc0616c5f0c75cd26e7128eab0a.js",
+    "precache-manifest.043b2072825cc9ec5fccafb49d69b4eb.js": "/TravelApplication/precache-manifest.043b2072825cc9ec5fccafb49d69b4eb.js",
     "service-worker.js": "/TravelApplication/service-worker.js",
-    "static/css/main.7630ce12.chunk.css.map": "/TravelApplication/static/css/main.7630ce12.chunk.css.map",
+    "static/css/main.76fae1c8.chunk.css.map": "/TravelApplication/static/css/main.76fae1c8.chunk.css.map",
     "static/js/2.d01c9749.chunk.js.LICENSE.txt": "/TravelApplication/static/js/2.d01c9749.chunk.js.LICENSE.txt",
     "static/media/Locals.png": "/TravelApplication/static/media/Locals.546249d4.png",
     "static/media/jumbotron1.jpg": "/TravelApplication/static/media/jumbotron1.bcba3a51.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.5777e109.js",
     "static/js/2.d01c9749.chunk.js",
-    "static/css/main.7630ce12.chunk.css",
+    "static/css/main.76fae1c8.chunk.css",
     "static/js/main.227da171.chunk.js"
   ]
 }
