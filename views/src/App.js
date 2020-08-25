@@ -13,6 +13,7 @@ import { store } from "./Services/store";
 import { db } from "./Firebase/firebase";
 import Map from "./Components/GoogleMaps/maps";
 import SearchLocationInput from "./Components/GoogleMaps/autocomplete";
+import BecomeAGuide from "./Pages/becomeaguide";
 
 const App = () => {
   const location = {
@@ -50,6 +51,10 @@ const App = () => {
               <Home {...props} />
             </>
           )}
+        />
+        <Route
+          path="/guide-reg"
+          render={(props) => <BecomeAGuide {...props} />}
         />
         <Route path="/search" render={(props) => <Search {...props} />} />
         <Route path="/login" render={(props) => <Login {...props} />} />

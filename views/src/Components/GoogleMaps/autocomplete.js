@@ -41,7 +41,7 @@ async function handlePlaceSelect(updateQuery) {
   console.log(addressObject);
 }
 
-function SearchLocationInput() {
+function SearchLocationInput({ disabled, setCity }) {
   const [query, setQuery] = useState("");
   const autoCompleteRef = useRef(null);
 
@@ -56,15 +56,21 @@ function SearchLocationInput() {
     <div className="search-location-input">
       <input
         ref={autoCompleteRef}
-        onChange={(event) => setQuery(event.target.value)}
+        onChange={(event) => {
+          setCity(event.target.value);
+          setQuery(event.target.value);
+        }}
         placeholder="Enter a City"
         value={query}
       />
-      <Link to="/search">
-        <button>
-          <img src={images.Search} alt="..." />
-        </button>
-      </Link>
+
+      {disabled ? null : (
+        <Link to="/search">
+          <button>
+            <img src={images.Search} alt="..." />
+          </button>
+        </Link>
+      )}
     </div>
   );
 }

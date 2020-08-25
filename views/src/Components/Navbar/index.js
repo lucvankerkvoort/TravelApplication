@@ -38,7 +38,10 @@ const Navbar = () => {
         ) : (
           <>
             <SignOutButton />
-            <Link style={{ textDecoration: "none", color: "black" }}>
+            <Link
+              to="/guide-reg"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <p>Become a Guide</p>
             </Link>
             {/* <Link style={{ textDecoration: "none", color: "black" }}>
