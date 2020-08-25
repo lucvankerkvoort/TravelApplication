@@ -3,8 +3,8 @@
 .register {
   display: flex;
   flex-direction: column;
-  height: 180vh;
-  justify-content: center;
+  height: 120vh;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
   font-family: $text-font;
