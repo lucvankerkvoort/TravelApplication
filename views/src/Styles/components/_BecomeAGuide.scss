@@ -14,7 +14,7 @@
     width: 100%;
     font-family: $header-font;
     color: black;
-    font-size: 4em;
+    font-size: 2em;
     background: white;
     // text-shadow: 2px 2px 6px black;
     border-bottom: 3px solid black;
@@ -67,5 +67,8 @@
     display: flex;
     margin: auto;
     width: 70%;
+    h1 {
+      font-size: 4em;
+    }
   }
 }
