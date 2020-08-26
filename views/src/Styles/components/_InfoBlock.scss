@@ -1,0 +1,36 @@
+.info-block {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  .info-pic {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    // border: 5px solid $yellow;
+    // box-shadow: 5px 5px 10px gray;
+    // padding: 15px;
+    margin: 15px;
+  }
+  .info-text {
+    h2 {
+      //   background: $yellow;
+      border: $yellow;
+      color: $yellow;
+      padding: 5px;
+      font-family: $header-font;
+    }
+    p {
+      padding: 15px;
+      font-family: $text-font;
+    }
+    // border: 7px solid black;
+
+    // box-shadow: 5px 5px 10px gray;
+    // padding: 5px;
+    border-radius: 12px;
+  }
+}

@@ -13,10 +13,16 @@
     display: flex;
     margin: auto;
     width: 70%;
+    justify-content: center;
+    // border: 2px solid black;
   }
   .home-search {
     position: absolute;
     top: 200px;
-    left: 100px;
+    left: 250px;
+  }
+  .info {
+    display: flex;
+    // margin: 50px;
   }
 }

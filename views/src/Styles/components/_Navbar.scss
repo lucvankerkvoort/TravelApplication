@@ -1,6 +1,6 @@
 @import "globals/Variables";
 .navbar {
-  //   border: 2px solid black;
+  // border: 2px solid black;
   display: flex;
   justify-content: flex-start;
   .navbar-items {
@@ -31,7 +31,7 @@
     .navbar-search {
       display: flex;
       position: absolute;
-      right: 50px;
+      right: 250px;
     }
   }
 }
