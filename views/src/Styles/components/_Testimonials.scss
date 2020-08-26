@@ -6,10 +6,24 @@
   //   background: rgba(240, 184, 40, 0.4);
   h1 {
     font-family: $header-font;
-    font-size: 4em;
-    margin: 50px;
+    font-size: 2em;
+    margin: 20px;
   }
   .testimonials-section {
     display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .testimonials {
+    h1 {
+      font-size: 4em;
+      margin: 50px;
+    }
+    .testimonials-section {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }

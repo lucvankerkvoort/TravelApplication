@@ -7,8 +7,8 @@
   text-align: center;
   margin: 20px;
   .info-pic {
-    height: 175px;
-    width: 175px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     // border: 5px solid $yellow;
     // box-shadow: 5px 5px 10px gray;
@@ -32,5 +32,14 @@
     // box-shadow: 5px 5px 10px gray;
     // padding: 5px;
     border-radius: 12px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .info-block {
+    .info-pic {
+      height: 175px;
+      width: 175px;
+    }
   }
 }

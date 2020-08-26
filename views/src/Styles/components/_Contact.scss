@@ -3,16 +3,20 @@
   margin: auto;
   flex-direction: column;
   width: 100%;
+  text-align: center;
   h1 {
     font-family: $header-font;
-    font-size: 4em;
-    margin: 50px;
+    font-size: 2em;
+    margin: 20px;
   }
   .contact-content {
     display: flex;
+    flex-direction: column;
     font-family: $text-font;
     justify-content: space-around;
+    align-items: center;
     div {
+      text-align: center;
       width: 300px;
       button {
         width: 100%;
@@ -35,6 +39,22 @@
         font-family: $text-font;
         margin: 4px;
         padding: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .contact {
+    h1 {
+      font-size: 4em;
+      margin: 50px;
+    }
+    .contact-content {
+      display: flex;
+      flex-direction: row;
+      div {
+        text-align: inherit;
       }
     }
   }
