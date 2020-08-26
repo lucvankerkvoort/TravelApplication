@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TravelApplication/static/css/main.ca5ee4c4.chunk.css",
+    "main.css": "/TravelApplication/static/css/main.829e581f.chunk.css",
     "main.js": "/TravelApplication/static/js/main.b176da34.chunk.js",
     "main.js.map": "/TravelApplication/static/js/main.b176da34.chunk.js.map",
     "runtime-main.js": "/TravelApplication/static/js/runtime-main.5777e109.js",
@@ -8,9 +8,9 @@
     "static/js/2.57a52e2a.chunk.js": "/TravelApplication/static/js/2.57a52e2a.chunk.js",
     "static/js/2.57a52e2a.chunk.js.map": "/TravelApplication/static/js/2.57a52e2a.chunk.js.map",
     "index.html": "/TravelApplication/index.html",
-    "precache-manifest.42af4a5be6faee78a376edc4073a554e.js": "/TravelApplication/precache-manifest.42af4a5be6faee78a376edc4073a554e.js",
+    "precache-manifest.423e7c7426866cd86dac1f0245d6cb80.js": "/TravelApplication/precache-manifest.423e7c7426866cd86dac1f0245d6cb80.js",
     "service-worker.js": "/TravelApplication/service-worker.js",
-    "static/css/main.ca5ee4c4.chunk.css.map": "/TravelApplication/static/css/main.ca5ee4c4.chunk.css.map",
+    "static/css/main.829e581f.chunk.css.map": "/TravelApplication/static/css/main.829e581f.chunk.css.map",
     "static/js/2.57a52e2a.chunk.js.LICENSE.txt": "/TravelApplication/static/js/2.57a52e2a.chunk.js.LICENSE.txt",
     "static/media/Locals.png": "/TravelApplication/static/media/Locals.546249d4.png",
     "static/media/fb.png": "/TravelApplication/static/media/fb.1a72d48d.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.5777e109.js",
     "static/js/2.57a52e2a.chunk.js",
-    "static/css/main.ca5ee4c4.chunk.css",
+    "static/css/main.829e581f.chunk.css",
     "static/js/main.b176da34.chunk.js"
   ]
 }
