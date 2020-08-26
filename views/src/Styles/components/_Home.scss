@@ -1,6 +1,7 @@
+@import "globals/variables";
 .home {
   // border: 2px solid black;
-  height: 80vh;
+  // height: 80vh;
 }
 .home-search {
   position: absolute;
@@ -11,11 +12,19 @@
 @media only screen and (min-width: 600px) {
   .home {
     display: flex;
+    flex-direction: column;
     margin: auto;
     width: 70%;
     justify-content: center;
     // border: 2px solid black;
+    text-align: center;
+    h1 {
+      font-family: $header-font;
+      font-size: 4em;
+      margin: 50px;
+    }
   }
+
   .home-search {
     position: absolute;
     top: 200px;

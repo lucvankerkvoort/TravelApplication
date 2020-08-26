@@ -26,6 +26,7 @@ const Home = () => {
   ];
   return (
     <div className="home">
+      <h1>How it Works</h1>
       <div className="info">
         {info.map((item) => (
           <InfoBlock image={item.image} title={item.title} text={item.text} />

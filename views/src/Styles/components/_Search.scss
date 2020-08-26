@@ -22,7 +22,7 @@
       font-size: 2em;
       font-family: $header-font;
 
-      border-bottom: 2px solid black;
+      // border-bottom: 2px solid black;
     }
     .available-guides {
       height: 100%;
@@ -44,21 +44,22 @@
 @media only screen and (min-width: 600px) {
   .search {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 80vh;
+    // flex-direction: row;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    // height: 80vh;
     .google-maps-placeholder {
-      height: 100%;
-      width: 50%;
+      height: 700px;
+      width: 100%;
       // border: 2px solid black;
     }
     .guides {
       margin: 0px;
       display: flex;
       height: 100%;
+      align-items: center;
       flex-direction: column;
-      width: 50%;
+      width: 80%;
       // border: 2px solid black;
       .guides-title {
         // border: 2px solid black;
@@ -70,6 +71,7 @@
 
       .available-guides {
         font-size: 1em;
+        width: 60%;
       }
     }
   }
