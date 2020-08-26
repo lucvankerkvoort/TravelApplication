@@ -1,0 +1,15 @@
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //   background: rgba(240, 184, 40, 0.4);
+  h1 {
+    font-family: $header-font;
+    font-size: 4em;
+    margin: 50px;
+  }
+  .testimonials-section {
+    display: flex;
+  }
+}

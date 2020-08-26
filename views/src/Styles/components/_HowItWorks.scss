@@ -1,0 +1,17 @@
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    font-family: $header-font;
+    font-size: 4em;
+    margin: 50px;
+  }
+  .info {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    // margin: 50px;
+  }
+}

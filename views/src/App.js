@@ -14,6 +14,9 @@ import { db } from "./Firebase/firebase";
 import Map from "./Components/GoogleMaps/maps";
 import SearchLocationInput from "./Components/GoogleMaps/autocomplete";
 import BecomeAGuide from "./Pages/becomeaguide";
+import Testimonials from "./Components/Testimonials";
+import HowItWorks from "./Components/HowItWorks";
+import Contact from "./Components/Contact/contact";
 
 const App = () => {
   const location = {
@@ -47,7 +50,6 @@ const App = () => {
               <div className="home-search">
                 <SearchLocationInput />
               </div>
-              <Jumbotron pic={images.jumbotron1} text="Welcome to Locals" />
               <Home {...props} />
             </>
           )}

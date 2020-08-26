@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { images } from "../../Images";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 let autoComplete;
 
@@ -45,6 +45,8 @@ function SearchLocationInput({ disabled, setCity }) {
   const [query, setQuery] = useState("");
   const autoCompleteRef = useRef(null);
 
+  const history = useHistory();
+  const isInvalid = query == "";
   useEffect(() => {
     loadScript(
       `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API}&libraries=places`,
@@ -57,7 +59,9 @@ function SearchLocationInput({ disabled, setCity }) {
       <input
         ref={autoCompleteRef}
         onChange={(event) => {
-          setCity(event.target.value);
+          if (setCity) {
+            setCity(event.target.value);
+          }
           setQuery(event.target.value);
         }}
         placeholder="Enter a City"
@@ -65,11 +69,9 @@ function SearchLocationInput({ disabled, setCity }) {
       />
 
       {disabled ? null : (
-        <Link to="/search">
-          <button>
-            <img src={images.Search} alt="..." />
-          </button>
-        </Link>
+        <button disabled={isInvalid} onClick={() => history.push("/search")}>
+          <img src={images.Search} alt="..." />
+        </button>
       )}
     </div>
   );

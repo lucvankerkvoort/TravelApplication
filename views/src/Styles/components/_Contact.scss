@@ -1,0 +1,41 @@
+.contact {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 100%;
+  h1 {
+    font-family: $header-font;
+    font-size: 4em;
+    margin: 50px;
+  }
+  .contact-content {
+    display: flex;
+    font-family: $text-font;
+    justify-content: space-around;
+    div {
+      width: 300px;
+      button {
+        width: 100%;
+      }
+    }
+    form {
+      display: flex;
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+      input {
+        font-family: $text-font;
+        margin: 4px;
+        padding: 5px;
+      }
+      textarea {
+        width: 50%;
+        font-family: $text-font;
+        margin: 4px;
+        padding: 5px;
+      }
+    }
+  }
+}
