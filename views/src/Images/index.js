@@ -5,6 +5,7 @@ import Marker from "./marker.png";
 import jumbotron2 from "./jumbotron2.jpg";
 import fb from "./fb.png";
 import insta from "./insta.png";
+import searchBackground from "./search-background.jpg";
 
 export const images = {
   jumbotron1,
@@ -14,4 +15,5 @@ export const images = {
   jumbotron2,
   fb,
   insta,
+  searchBackground,
 };

@@ -6,7 +6,7 @@
   border-radius: 15px;
   margin: 15px;
   padding: 15px;
-  box-shadow: 10px 10px 5px gray;
+  // box-shadow: 10px 10px 5px white;
   justify-content: space-between;
   .profile-pic {
     height: 50px;
@@ -29,8 +29,11 @@
 
 @media only screen and (min-width: 600px) {
   .search-profile {
+    // display: flex;
+    margin: 50px auto;
+    background: white;
     // border: 2px solid black;
-    // width: 75%;
+    width: 65%;
     .profile-pic {
       height: 100px;
       width: 100px;

@@ -7,7 +7,14 @@
   .google-maps-placeholder {
     height: 350px;
     width: 100%;
+    margin-bottom: 50px;
     // border: 2px solid black;
+    h1 {
+      font-family: $header-font;
+      color: $yellow;
+      text-shadow: 2px 2px black;
+      font-size: 1.5em;
+    }
   }
   .guides {
     display: flex;
@@ -17,20 +24,29 @@
     // border: 2px solid black;
     .guides-title {
       // border: 2px solid black;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
       height: 75px;
+      color: $yellow;
       text-align: center;
       font-size: 2em;
       font-family: $header-font;
+      text-shadow: 2px 2px black;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
 
       // border-bottom: 2px solid black;
     }
     .available-guides {
+      background: rgba(0, 0, 0, 0.5);
       height: 100%;
       //   width: 50%;
       // border: 2px solid black;
       overflow: scroll;
       font-size: 0.8em;
-
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      // width: 100%;
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
       /* Hide scrollbar for Chrome, Safari and Opera */
@@ -49,8 +65,12 @@
     // align-items: flex-start;
     // height: 80vh;
     .google-maps-placeholder {
+      text-align: center;
       height: 700px;
       width: 100%;
+      h1 {
+        font-size: 3em;
+      }
       // border: 2px solid black;
     }
     .guides {
@@ -71,7 +91,7 @@
 
       .available-guides {
         font-size: 1em;
-        width: 60%;
+        width: 100%;
       }
     }
   }

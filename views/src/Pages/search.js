@@ -1,6 +1,7 @@
 import React from "react";
 import SearchProfile from "../Components/SearchProfile/searchprofile";
 import Map from "../Components/GoogleMaps/maps";
+import { images } from "../Images";
 const Search = () => {
   const location = {
     address: "1600 Amphitheatre Parkway, Mountain View, california.",
@@ -14,8 +15,18 @@ const Search = () => {
     { name: "test", location: "test 1234", rating: 4 },
   ];
   return (
-    <div className="search">
+    <div
+      className="search"
+      style={{
+        background: `url(${images.searchBackground})`,
+        // backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <div className="google-maps-placeholder">
+        <h1>Map</h1>
         <Map location={location} zoomLevel={15} />
       </div>
       <div className="guides">
