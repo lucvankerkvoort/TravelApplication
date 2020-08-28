@@ -6,6 +6,8 @@
   border-radius: 15px;
   margin: 15px;
   padding: 15px;
+
+  background: white;
   // box-shadow: 10px 10px 5px white;
   justify-content: space-between;
   .profile-pic {
@@ -31,7 +33,6 @@
   .search-profile {
     // display: flex;
     margin: 50px auto;
-    background: white;
     // border: 2px solid black;
     width: 65%;
     .profile-pic {
