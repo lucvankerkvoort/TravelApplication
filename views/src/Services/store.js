@@ -10,6 +10,8 @@ const StateProvider = ({ children }) => {
         return Object.assign({}, state, { authed: action.payload });
       case "images":
         return Object.assign({}, state, { images: action.payload });
+      case "location":
+        return Object.assign({}, state, { location: action.payload });
       default:
         throw new Error();
     }
