@@ -40,15 +40,13 @@ class SignUpFormBase extends Component {
   static userData = store;
 
   onSubmit = (event) => {
-    event.preventDefault();
     const { username, email, passwordOne } = this.state;
-
+    const { dispatch } = this.context;
     const info = {
       images: this.context.state.images,
       username,
       email,
     };
-
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then((authUser) => {
@@ -58,12 +56,15 @@ class SignUpFormBase extends Component {
           .then((res) => console.log(res));
 
         // this.setState({ ...INITIAL_STATE });
+        dispatch({ type: "authed", payload: true });
         localStorage.setItem("authUser", JSON.stringify(authUser.user.l));
         this.props.history.push("/");
       })
       .catch((error) => {
         this.setState({ error });
       });
+
+    event.preventDefault();
   };
 
   setImages = (input) => {
@@ -89,6 +90,7 @@ class SignUpFormBase extends Component {
       email === "" ||
       username === "" ||
       image === false;
+
     return (
       <div className="registration-div">
         <div className="profile-picture">

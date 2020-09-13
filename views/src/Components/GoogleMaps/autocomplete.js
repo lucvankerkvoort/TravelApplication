@@ -25,28 +25,36 @@ const loadScript = (url, callback) => {
 };
 
 function handleScriptLoad(updateQuery, autoCompleteRef, dispatch) {
-  autoComplete = new window.google.maps.places.Autocomplete(
-    autoCompleteRef.current,
-    { types: ["(cities)"], componentRestrictions: { country: "us" } }
-  );
-  autoComplete.setFields([
-    "address_components",
-    "formatted_address",
-    "geometry",
-  ]);
-  autoComplete.addListener("place_changed", () =>
-    handlePlaceSelect(updateQuery, dispatch)
-  );
+  let inputs = document.getElementsByClassName("search-location-input");
+  console.log(inputs);
+  let options = {
+    types: ["(cities)"],
+    componentRestrictions: { country: "us" },
+  };
+  let autocompletes = [];
+  for (let i = 0; i < inputs.length; i++) {
+    const autoComplete = new window.google.maps.places.Autocomplete(
+      inputs[i].childNodes[0],
+      options
+    );
+    autoComplete.setFields([
+      "address_components",
+      "formatted_address",
+      "geometry",
+    ]);
+    autoComplete.inputId = inputs[i].id;
+    autoComplete.addListener("place_changed", () =>
+      handlePlaceSelect(updateQuery, dispatch)
+    );
+    autocompletes.push(autoComplete);
+  }
 }
 
 async function handlePlaceSelect(updateQuery, dispatch) {
-  // const userData = useContext(store);
-  // const { dispatch } = userData;
   const addressObject = autoComplete.getPlace();
   const query = addressObject.formatted_address;
   updateQuery(query);
   dispatch({ type: "location", payload: addressObject.geometry.location });
-  // console.log(addressObject);
 }
 
 function SearchLocationInput({ disabled, setCity }) {

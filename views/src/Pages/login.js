@@ -28,11 +28,13 @@ class SignInFormBase extends Component {
 
   onSubmit = (event) => {
     const { email, password } = this.state;
+    const { dispatch } = this.context;
 
     this.props.firebase
       .doSignInWithEmailAndPassword(email, password)
       .then((user) => {
         this.setState({ ...INITIAL_STATE });
+        dispatch({});
         localStorage.setItem("authUser", JSON.stringify(user.user.l));
         this.props.history.push("/");
       })
