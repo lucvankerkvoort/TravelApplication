@@ -49,13 +49,13 @@ The home page is a simple one pager with information about the project and a con
 The contact form uses emailjs to send the messages to the main email address connected to the application.
 
 
-![Image of git clone](https://github.com/lucvankerkvoort/TravelApplication/blob/master/Screenshot%202020-09-14%20161822.png)
+![Image of Home](https://github.com/lucvankerkvoort/TravelApplication/blob/master/home.gif)
 
 ## Login
 
 The login is build with the use of Firebase. It has great documentation and there are a ton of tutorials out there that showcase how to setup a authentication with Google, email and password, Github etc.
 
-![Image of git clone](https://github.com/lucvankerkvoort/TravelApplication/blob/master/Screenshot%202020-09-14%20161822.png)
+![Image of Login](https://github.com/lucvankerkvoort/TravelApplication/blob/master/Login.gif)
 
 
 ## Register
@@ -63,7 +63,7 @@ The login is build with the use of Firebase. It has great documentation and ther
 The Register is also build with Firebase. I also added Firebase Storage to save the images and then sending the picture url over to the firestore to serve the user information on Login
 
 
-![Image of git clone](https://github.com/lucvankerkvoort/TravelApplication/blob/master/Screenshot%202020-09-14%20161822.png)
+![Image of Register](https://github.com/lucvankerkvoort/TravelApplication/blob/master/register.gif)
 
 ## Chat
 The chat functionality is build with the Firebase Realtime database. 
