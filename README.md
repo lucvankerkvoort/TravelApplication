@@ -12,4 +12,4 @@ Hopefully we can build this application out to become the #1 travel application 
 
 to setup the repository make sure you have Node.js installed on your machine.
 clone the repository by clicking 
-![Image of git clone](https://github.com/lucvankerkvoort/TravelApplication/screen)
+![Image of git clone](https://github.com/lucvankerkvoort/TravelApplication/blob/master/Screenshot%202020-09-14%20161822.png)
