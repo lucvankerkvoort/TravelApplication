@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { chat } from "../Firebase/firebase";
 
 class Chat extends React.Component {

@@ -7,7 +7,7 @@ const BecomeAGuide = () => {
   const [address, setAddress] = useState("");
   const [zip, setZip] = useState("");
   const [country, setCountry] = useState("");
-  console.log(city, address);
+  console.log(city, address, zip, country);
   return (
     <div
       className="become-a-guide"

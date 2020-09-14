@@ -51,7 +51,7 @@ class SignUpFormBase extends Component {
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then((authUser) => {
         db.collection("users")
-          .doc(username)
+          .doc(email)
           .set(info)
           .then((res) => console.log(res));
 

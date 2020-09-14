@@ -3,8 +3,6 @@ import { images } from "../../Images";
 import { Link, useHistory } from "react-router-dom";
 import SignOutButton from "../SignOutButton/signout";
 
-import SearchAutocomplete from "../GoogleMaps/autocomplete";
-
 const Navbar = () => {
   const history = useHistory();
 
@@ -45,6 +43,10 @@ const Navbar = () => {
               style={{ textDecoration: "none", color: "black" }}
             >
               <p>Become a Guide</p>
+            </Link>
+
+            <Link to="/chat" style={{ textDecoration: "none", color: "black" }}>
+              <p>Chats</p>
             </Link>
             {/* <Link style={{ textDecoration: "none", color: "black" }}>
               <p>Help</p>
