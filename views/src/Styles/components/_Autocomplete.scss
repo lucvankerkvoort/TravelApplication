@@ -14,3 +14,14 @@
     }
   }
 }
+
+.search-autocomplete {
+  display: flex;
+  button {
+    box-shadow: 1px 1px 3px gray;
+    img {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}

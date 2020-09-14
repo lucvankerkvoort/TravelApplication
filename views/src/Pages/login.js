@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import { images } from "../Images";
-
+import { store } from "../Services/store";
 import { SignUpLink } from "./register";
 import { withFirebase } from "../Firebase";
 
@@ -25,6 +25,7 @@ class SignInFormBase extends Component {
 
     this.state = { ...INITIAL_STATE };
   }
+  static userData = store;
 
   onSubmit = (event) => {
     const { email, password } = this.state;
@@ -34,8 +35,14 @@ class SignInFormBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then((user) => {
         this.setState({ ...INITIAL_STATE });
-        dispatch({});
         localStorage.setItem("authUser", JSON.stringify(user.user.l));
+        localStorage.setItem(
+          "currentUser",
+          JSON.stringify(this.props.firebase.auth.currentUser)
+        );
+      })
+      .then(() => {
+        dispatch({ type: "authed", payload: true });
         this.props.history.push("/");
       })
       .catch((error) => {
@@ -50,6 +57,7 @@ class SignInFormBase extends Component {
   };
 
   render() {
+    console.log(this.props.firebase.auth.currentUser);
     const { email, password, error } = this.state;
 
     const isInvalid = password === "" || email === "";
@@ -85,6 +93,7 @@ class SignInFormBase extends Component {
   }
 }
 
+SignInFormBase.contextType = store;
 const SignInForm = compose(withRouter, withFirebase)(SignInFormBase);
 
 export default Login;

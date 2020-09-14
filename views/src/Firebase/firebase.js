@@ -1,6 +1,7 @@
 import app from "firebase/app";
 import "firebase/auth";
 import "firebase/storage";
+import "firebase/database";
 import "firebase/firestore";
 
 const config = {
@@ -15,6 +16,7 @@ const config = {
 app.initializeApp(config);
 
 const db = app.firestore();
+const chat = app.database();
 const storage = app.storage();
 
 class Firebase {
@@ -37,4 +39,4 @@ class Firebase {
 
 export default Firebase;
 
-export { storage, db };
+export { storage, db, chat };

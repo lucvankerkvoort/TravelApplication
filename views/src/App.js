@@ -1,44 +1,38 @@
 import React, { useContext, useEffect } from "react";
 import Navbar from "./Components/Navbar";
+import Chat from "./Pages/chat";
 import Home from "./Pages/home";
 import Footer from "./Components/Footer";
-import Jumbotron from "./Components/Jumbotron";
 import Register from "./Pages/register";
 import Login from "./Pages/login";
 import Search from "./Pages/search";
 import "./Styles/import.scss";
-import { images } from "./Images";
-import { HashRouter, Route /*useHistory*/ } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import { store } from "./Services/store";
-import { db } from "./Firebase/firebase";
-import Map from "./Components/GoogleMaps/maps";
-import SearchLocationInput from "./Components/GoogleMaps/autocomplete";
 import BecomeAGuide from "./Pages/becomeaguide";
-import Testimonials from "./Components/Testimonials";
-import HowItWorks from "./Components/HowItWorks";
-import Contact from "./Components/Contact/contact";
+import SearchAutocomplete from "./Components/GoogleMaps/autocomplete";
 
 const App = () => {
-  const location = {
-    address: "1600 Amphitheatre Parkway, Mountain View, california.",
-    lat: 37.42216,
-    lng: -122.08427,
-  }; // our location object from earlier
+  const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API;
+  const script = document.createElement("script");
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}`;
+  document.head.append(script);
 
-  // const userData = useContext(store);
-  // const { dispatch } = userData;
+  const userData = useContext(store);
+  const { dispatch } = userData;
+
+  console.log(userData);
   // console.log(userData);
   // const history = useHistory();
-  // useEffect(() => {
-  // db.collection("users").doc()
-  // }, [userData.state.check]);
+  // console.log(history);
+  useEffect(() => {
+    // db.collection("users").doc()
+  }, [userData.state.check]);
   return (
     <div className="App">
-      {/* <SearchLocationInput />
-      <Map location={location} zoomLevel={17} /> */}
       {/* <HashRouter>
         <Navbar />
-        <Search />
+        <Chat />
       </HashRouter> */}
       <HashRouter>
         <Navbar />
@@ -48,7 +42,7 @@ const App = () => {
           render={(props) => (
             <>
               <div className="home-search">
-                <SearchLocationInput />
+                <SearchAutocomplete />
               </div>
               <Home {...props} />
             </>
@@ -61,6 +55,7 @@ const App = () => {
         <Route path="/search" render={(props) => <Search {...props} />} />
         <Route path="/login" render={(props) => <Login {...props} />} />
         <Route path="/register" render={(props) => <Register {...props} />} />
+        <Route path="/chat" render={(props) => <Chat {...props} />} />
         <Footer />
       </HashRouter>
     </div>

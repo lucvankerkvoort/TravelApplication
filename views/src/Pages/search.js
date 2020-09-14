@@ -2,6 +2,7 @@ import React from "react";
 import SearchProfile from "../Components/SearchProfile/searchprofile";
 import Map from "../Components/GoogleMaps/maps";
 import { images } from "../Images";
+import SearchAutocomplete from "../Components/GoogleMaps/autocomplete";
 const Search = () => {
   const location = {
     address: "1600 Amphitheatre Parkway, Mountain View, california.",
@@ -27,6 +28,9 @@ const Search = () => {
     >
       <div className="google-maps-placeholder">
         <h1>Map</h1>
+        <div style={{ marginTop: "50px" }}>
+          <SearchAutocomplete />
+        </div>
         <Map location={location} zoomLevel={15} />
       </div>
       <div className="guides">

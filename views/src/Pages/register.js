@@ -58,6 +58,10 @@ class SignUpFormBase extends Component {
         // this.setState({ ...INITIAL_STATE });
         dispatch({ type: "authed", payload: true });
         localStorage.setItem("authUser", JSON.stringify(authUser.user.l));
+        localStorage.setItem(
+          "currentUser",
+          JSON.stringify(this.props.firebase.auth.currentUser)
+        );
         this.props.history.push("/");
       })
       .catch((error) => {

@@ -1,11 +1,16 @@
 import React, { useEffect } from "react";
 import { images } from "../../Images";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import SignOutButton from "../SignOutButton/signout";
 
-import SearchLocationInput from "../GoogleMaps/autocomplete";
+import SearchAutocomplete from "../GoogleMaps/autocomplete";
 
 const Navbar = () => {
+  const history = useHistory();
+
+  useEffect(() => {
+    console.log(history);
+  }, [history.location.pathname]);
   return (
     <div className="navbar">
       <div className="logo">
@@ -17,9 +22,6 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
           <p>Home</p>
         </Link>
-        <div className="navbar-search">
-          <SearchLocationInput />
-        </div>
         {localStorage.getItem("authUser") === "" ? (
           <>
             <Link
