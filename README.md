@@ -70,7 +70,7 @@ The chat functionality is build with the Firebase Realtime database.
 It sends and receives messages from the realtime database indicating the ones that are send from the user and the ones send by other users.
 
 
-![Image of git clone](https://github.com/lucvankerkvoort/TravelApplication/blob/master/Screenshot%202020-09-14%20161822.png)
+![Image of Chat](https://github.com/lucvankerkvoort/TravelApplication/blob/master/chat.gif)
 
 
 
