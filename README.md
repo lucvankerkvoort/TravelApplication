@@ -72,6 +72,13 @@ It sends and receives messages from the realtime database indicating the ones th
 
 ![Image of Chat](https://github.com/lucvankerkvoort/TravelApplication/blob/master/chat.gif)
 
+## Search
+I've created a search capability utilizing Google Maps API for the map and markers. 
+This will eventually populate with a database full of users to showcase all their location and possible images.
+From here you can start chatting with other users.
+
+
+![Image of Search](https://github.com/lucvankerkvoort/TravelApplication/blob/master/search.gif)
 
 
 
